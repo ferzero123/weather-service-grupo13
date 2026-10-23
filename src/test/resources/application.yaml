@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: weather-service
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:h2:mem:weather_test;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+eureka:
+  client:
+    enabled: false
+weather:
+  api:
+    base-url: http://localhost:9999
+    api-key: test-key
+    default-lang: es
+    default-units: metric
